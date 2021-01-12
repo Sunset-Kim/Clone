@@ -1,0 +1,143 @@
+*{
+  box-sizing: border-box;
+    margin: 0;
+    top:0;
+    left: 0;
+}
+ul{
+    padding:12px;
+}
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li{
+  list-style: none;
+    padding: none;
+}
+
+root{
+    --padding-padding:20px;
+}
+/* header design */
+.main{
+    background-color: antiquewhite;
+}
+header .head-container{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: sticky;
+    top:0;
+    opacity: 0.8
+    
+}
+.head-container li{
+    
+}
+.head-container i{
+    
+    font-size: 20px;
+}
+.top-bar{
+  display: flex;
+}
+
+/*main design*/
+.main{
+    margin: 16px;
+    padding:48px;
+}
+.main .content{
+    text-align: center;  
+    margin: 48px auto;
+    padding: 16px;
+    font-size: 16px;
+    font-weight:400px;
+}
+
+.main .content h1{
+    margin: 10px
+}
+
+.main .content p{
+    margin: 10px;
+}
+
+/*container design*/
+.flex{
+    display: flex;
+    flex-wrap:wrap;
+    margin: 16px;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    color: white;
+    align-items: center;
+    margin: 0;
+    padding: 48px;
+    padding-bottom:0px;
+    flex:1;
+    margin-right: 16px;
+    overflow: hidden;
+}
+.article1{
+    margin: 16px;
+    padding: 16px;
+    font-size:16px;
+    text-align: center;
+}
+.box{
+    border:1px white solid;
+    height: 300px;
+    width: 80%;
+    border-top-right-radius: 21px;
+    border-top-left-radius: 21px;
+    padding: 0px;
+    background-color: white
+    
+    
+}
+/*foot design*/
+#footer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    margin: auto;
+    width: 100%;
+    max-width: 960px;
+    padding: 48px 16px;
+
+    
+}
+.menu{
+    padding: 0 12px;
+}
+footer div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+@media (max-width:880px){
+    .flex{
+        display: block;
+    }
+    
+    
+    .col1{
+        flex:0 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    .col6{
+        flex:0 0 auto;
+        width: 50%;
+        max-width: 100%;
+    }
+    
+}
