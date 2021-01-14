@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/* 초기리셋 */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+/* 불릿기호 초기화*/
+dl,ul,li,menu{
+  list-style:none;
+}
+/* IR 효과 */
+/* 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+.ir_pm{
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+/* 의미있는 이미지의 대체 텍스트로 이미지가 없어도
+ 대체 텍스트를 보여주고자 할때 */
+.ir_wa{
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+/* 대체 텍스트가 아니라 접급성을 위한 숨김 텍스트를 제공할때 */
+.ir_su{
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  list-style: 0;
+  text-indent: -9999px;
+}
+/* root */
+:root{
+  --main-color:#4aa8d4;
+}
+/* 스킵 네비게이션 */
+#skip{
+  position: relative;
+  }
+#skip a{
+  position: absolute;
+  top:-35px;
+  left:0px;
+  width: 200px;
+  background: white;
+  border: 1px solid black;
+  text-align: center;
+}
+#skip a:active,
+#skip a:focus{
+  top:0;
+}
+
+/* 레이아웃  */
+#wrap{}
+header{
+ height:325px;
+ background: url(../images/header_bg.jpg) center top repeat-X;
+}
+content{}
+footer{
+  height: 200px;background: #333;
+}
+/* 컨텐츠 레이아웃 */
+#nav{}
+#tit{
+  background: #EAF7FD;
+}
+#ban{
+  width: 100%; background: #dceff7;
+}
+#contents{
+  width: 100%; height: 200px; background: #666;
+}
+.container{
+  width:990px;
+  margin: 0 auto;
+  height: inherit;
+  /*border:1px red solid;*/
+}
+/* 헤더 부분  */
+.header-menu{
+  text-align: right;
+}
+.header-menu a{
+  display: inline-block;
+  color: white;
+  padding: 10px;
+}
+.header-menu a:hover{
+  color: #333;
+}
+.header-tit{
+  text-align:center;
+
+}
+.header-tit h1{
+  background-color: var(--main-color);
+  display: inline-block;
+  font-size: 28px;
+  padding: 5px 20px 6px 20px;
+  display: inline-block;
+  color: #fff;
+  margin-top: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.header-tit a{
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 20px 6px 20px;
+  display: inline-block;
+  background-color: #2698cb;
+  margin-top:-5px;
+  color: #fff;
+  font-weight: normal;
+}
+.header-icon{
+  text-align:center;
+}
+.header-icon a{
+  display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: url(../images/icon.png);
+    margin: 0 3px auto;
+    margin-top:30px;
+}
+.header-icon a.icon1{
+  background-position: 0  0;
+}
+.header-icon a.icon2{
+  background-position: 0  -60px;
+}
+.header-icon a.icon3{
+  background-position: 0  -120px;
+}
+.header-icon a.icon4{
+  background-position: 0  -180px;
+}
+.header-icon a.icon1:hover{
+  background-position: -60px  0;
+}
+.header-icon a.icon2:hover{
+  background-position: -60px  -60px;
+}
+.header-icon a.icon3:hover{
+  background-position: -60px  -120px;
+}
+.header-icon a.icon4:hover{
+  background-position: -60px  -180px;
+}
+
+/* 전체메뉴 */
+
+.nav{
+  padding: 30px 0;
+  overflow: hidden;
+}
+.nav > div{
+  float: left;
+  width: 40%;
+}
+.nav > div:last-child{
+  width: 20%;
+}
+.nav h3{
+  font-size:18px;
+  color:#25a2d0;
+  margin-bottom: 4px;
+}
+.nav ol{
+  overflow: hidden;
+}
+.nav ol li{
+  float: left;
+  width: 50%;
+}
+.nav div.last ol li{
+  width: 100%;
+}
+.nav > div ol li a:hover{
+  text-decoration: underline;
+}
+/* 전체 타이틀 */
+.tit{
+  position: relative;
+  text-align:center;
+
+}
+.tit h2{
+  font-size:40px;
+  padding: 5px 0;
+  letter-spacing: 2px;
+  color: #2c94c4;
+}
+.tit .btn{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 3px;
+  right: 0;
+  background: url(../images/icon.png) no-repeat 0 -600px;
+
+
+}
+.tit .btn:hover{
+  background-position: -60px -600px;
+}
+
+/* 배너 */
+.ban{ position: relative;}
+.ban > a{position: absolute; top: 0; width: 43px; height: 43px; background: url(../images/icon.png);}
+.ban a.prev{left: -60px; background-position:-150px 0; margin-top: 35px;}
+.ban a.next{right: -60px; background-position:-150px -43px; margin-top: 35px;}
+.ban ul{overflow: hidden;}
+.ban ul li{float: left; width: 330px;}
+.ban ul li:last-child{text-align: right;}
+.ban ul li:nth-child(2){text-align: center;}
+.ban a.prev:hover{background-position: -193px 0;}
+.ban a.next:hover{background-position: -193px -43px;}
